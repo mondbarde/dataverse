@@ -5,6 +5,24 @@ import rehypeRaw from 'rehype-raw';
 import { glossary } from '../utils/glossary';
 
 const Whitepaper = ({ content, onTermClick }) => {
+    const slugify = (text) =>
+        text
+            .toLowerCase()
+            .replace(/<[^>]+>/g, '') // strip inline HTML tags
+            .replace(/[^\w\s-]/g, '') // Remove special chars
+            .replace(/\s+/g, '-'); // Replace spaces with hyphens
+
+    const extractText = (children) => {
+        return React.Children.toArray(children)
+            .map((child) => {
+                if (typeof child === 'string' || typeof child === 'number') return child.toString();
+                if (child?.props?.children) return extractText(child.props.children);
+                return '';
+            })
+            .join(' ')
+            .trim();
+    };
+
     // 텍스트에서 용어를 찾아 클릭 가능한 컴포넌트로 감싸는 함수
     const wrapTermsWithClickable = (text) => {
         if (typeof text !== 'string') return text;
@@ -68,21 +86,25 @@ const Whitepaper = ({ content, onTermClick }) => {
     };
 
     const components = {
-        h1: ({ node, ...props }) => {
-            const id = props.children[0]?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-            return <h1 id={id} className="scroll-mt-24 text-4xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-blue-950 bg-clip-text text-transparent sm:text-5xl mb-8" {...props} />;
+        h1: ({ node, children, ...props }) => {
+            const text = extractText(children);
+            const id = slugify(text);
+            return <h1 id={id} className="scroll-mt-24 text-4xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-blue-950 bg-clip-text text-transparent sm:text-5xl mb-8" {...props}>{children}</h1>;
         },
-        h2: ({ node, ...props }) => {
-            const id = props.children[0]?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-            return <h2 id={id} className="scroll-mt-24 text-3xl font-bold tracking-tight text-blue-950 dark:text-gray-200 mt-12 mb-6 border-b-2 border-orange-200 dark:border-orange-800 pb-2" {...props} />;
+        h2: ({ node, children, ...props }) => {
+            const text = extractText(children);
+            const id = slugify(text);
+            return <h2 id={id} className="scroll-mt-24 text-3xl font-bold tracking-tight text-blue-950 dark:text-gray-200 mt-12 mb-6 border-b-2 border-orange-200 dark:border-orange-800 pb-2" {...props}>{children}</h2>;
         },
-        h3: ({ node, ...props }) => {
-            const id = props.children[0]?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-            return <h3 id={id} className="scroll-mt-24 text-2xl font-bold tracking-tight text-gray-800 dark:text-gray-200 mt-8 mb-4" {...props} />;
+        h3: ({ node, children, ...props }) => {
+            const text = extractText(children);
+            const id = slugify(text);
+            return <h3 id={id} className="scroll-mt-24 text-2xl font-bold tracking-tight text-gray-800 dark:text-gray-200 mt-8 mb-4" {...props}>{children}</h3>;
         },
-        h4: ({ node, ...props }) => {
-            const id = props.children[0]?.toString().toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-            return <h4 id={id} className="scroll-mt-24 text-xl font-semibold tracking-tight text-gray-700 dark:text-gray-300 mt-6 mb-3" {...props} />;
+        h4: ({ node, children, ...props }) => {
+            const text = extractText(children);
+            const id = slugify(text);
+            return <h4 id={id} className="scroll-mt-24 text-xl font-semibold tracking-tight text-gray-700 dark:text-gray-300 mt-6 mb-3" {...props}>{children}</h4>;
         },
         p: ({ node, children, ...props }) => {
             const processedChildren = React.Children.map(children, child => {
