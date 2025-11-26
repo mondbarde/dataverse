@@ -91,10 +91,10 @@ const Whitepaper = ({ content, onTermClick }) => {
                 }
                 return child;
             });
-            return <p className="text-lg leading-8 text-gray-900 dark:text-gray-100 mb-6" {...props}>{processedChildren}</p>;
+            return <p className="text-lg leading-7 md:leading-8 text-gray-900 dark:text-gray-100 mb-5" {...props}>{processedChildren}</p>;
         },
-        ul: ({ node, ...props }) => <ul className="list-none ml-6 mb-6 space-y-2" {...props} />,
-        ol: ({ node, ...props }) => <ol className="list-decimal list-outside ml-6 mb-6 text-gray-900 dark:text-gray-100 space-y-2" {...props} />,
+        ul: ({ node, ...props }) => <ul className="list-disc marker:text-orange-500 list-outside ml-6 mb-5 space-y-2 text-lg leading-7 md:leading-8 text-gray-900 dark:text-gray-100" {...props} />,
+        ol: ({ node, ...props }) => <ol className="list-decimal marker:text-orange-500 list-outside ml-6 mb-5 space-y-2 text-lg leading-7 md:leading-8 text-gray-900 dark:text-gray-100" {...props} />,
         li: ({ node, children, ...props }) => {
             const processedChildren = React.Children.map(children, child => {
                 if (typeof child === 'string') {
@@ -103,9 +103,8 @@ const Whitepaper = ({ content, onTermClick }) => {
                 return child;
             });
             return (
-                <li className="mb-2 pl-1 text-gray-900 dark:text-gray-100 flex items-start" {...props}>
-                    <span className="text-orange-500 mr-2 mt-2 flex-shrink-0">•</span>
-                    <span>{processedChildren}</span>
+                <li className="pl-1 leading-7 md:leading-8 text-gray-900 dark:text-gray-100" {...props}>
+                    {processedChildren}
                 </li>
             );
         },
@@ -117,7 +116,7 @@ const Whitepaper = ({ content, onTermClick }) => {
                 return child;
             });
             return (
-                <blockquote className="border-l-4 border-orange-500 dark:border-orange-600 pl-6 pr-4 italic text-gray-800 dark:text-gray-300 bg-gradient-to-r from-orange-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 py-4 my-6 rounded-r-lg shadow-sm" {...props}>
+                <blockquote className="border-l-4 border-orange-500 dark:border-orange-600 pl-6 pr-4 italic text-gray-800 dark:text-gray-300 bg-gradient-to-r from-orange-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 py-4 my-6 rounded-r-lg shadow-sm leading-7 md:leading-8" {...props}>
                     {processedChildren}
                 </blockquote>
             );
