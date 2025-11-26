@@ -1,16 +1,31 @@
-# React + Vite
+# Datinum Whitepaper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite 싱글 페이지 앱으로 Datinum whitepaper를 시각화한다.
 
-Currently, two official plugins are available:
+## 개발
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## 빌드
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run build
+npm run preview
+```
 
-## Expanding the ESLint configuration
+## GitHub Pages 배포
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. `main`에 push 하면 `.github/workflows/deploy.yml`이 자동으로 실행돼 Pages용 빌드를 만든다.
+2. 처음 한 번은 GitHub > Settings > Pages에서 **Build and deployment**를 “GitHub Actions”로 바꿔준다.
+3. 워크플로가 끝나면 `https://mondbarde.github.io/datinum/`에서 결과를 볼 수 있다.
+
+필요하면 수동으로도 실행 가능:
+
+```bash
+gh workflow run Deploy_to_GitHub_Pages
+```
+
+> fetch 경로는 `import.meta.env.BASE_URL`을 기준으로 동작하므로 로컬/배포 모두 동일하게 whitepaper를 불러온다.

@@ -11,7 +11,9 @@ function App() {
   const [highlightedTerm, setHighlightedTerm] = useState('');
 
   useEffect(() => {
-    fetch('/whitepaper0.1.md')
+    const whitepaperUrl = `${import.meta.env.BASE_URL}whitepaper0.1.md`;
+
+    fetch(whitepaperUrl)
       .then((response) => response.text())
       .then((text) => {
         // 전처리: ** 패턴을 <strong> 태그로 변환 (특수문자가 있어도 작동하도록)
