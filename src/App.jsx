@@ -25,14 +25,21 @@ function App() {
 
   useEffect(() => {
     if (!markdown) return;
-    const runMathJax = () => {
+    let attempts = 0;
+    const maxAttempts = 10;
+    const interval = setInterval(() => {
+      attempts += 1;
       if (window.MathJax?.typesetPromise) {
         window.MathJax.typesetPromise().catch(() => {});
+        if (attempts >= 2) {
+          clearInterval(interval);
+        }
       }
-    };
-    runMathJax();
-    const t = setTimeout(runMathJax, 300);
-    return () => clearTimeout(t);
+      if (attempts >= maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 300);
+    return () => clearInterval(interval);
   }, [markdown]);
 
   return (
