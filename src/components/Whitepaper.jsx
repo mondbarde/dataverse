@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 import rehypeRaw from 'rehype-raw';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import { glossary } from '../utils/glossary';
 
 const Whitepaper = ({ content, onTermClick }) => {
@@ -87,36 +90,6 @@ const Whitepaper = ({ content, onTermClick }) => {
     };
 
     const components = {
-        div: ({ node, children, className, ...props }) => {
-            if (className === 'math-block') {
-                return (
-                    <div
-                        className="math-block text-lg my-6 text-gray-900 dark:text-gray-100"
-                        data-katex
-                        data-display="true"
-                        {...props}
-                    >
-                        {children}
-                    </div>
-                );
-            }
-            return <div className={className} {...props}>{children}</div>;
-        },
-        span: ({ node, children, className, ...props }) => {
-            if (className === 'math-inline') {
-                return (
-                    <span
-                        className="math-inline text-lg text-gray-900 dark:text-gray-100"
-                        data-katex
-                        data-display="false"
-                        {...props}
-                    >
-                        {children}
-                    </span>
-                );
-            }
-            return <span className={className} {...props}>{children}</span>;
-        },
         h1: ({ node, children, ...props }) => {
             const text = extractText(children);
             const id = slugify(text);
@@ -193,17 +166,11 @@ const Whitepaper = ({ content, onTermClick }) => {
         em: ({ node, ...props }) => <em className="italic text-orange-700 dark:text-orange-400" {...props} />,
     };
 
-    React.useEffect(() => {
-        if (window.MathJax && window.MathJax.typesetPromise) {
-            window.MathJax.typesetPromise().catch((err) => console.error('MathJax typeset failed:', err));
-        }
-    }, [content]);
-
     return (
         <article className="max-w-none" ref={articleRef}>
             <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeRaw]}
+                remarkPlugins={[remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeRaw, rehypeKatex]}
                 components={components}
                 skipHtml={false}
             >
