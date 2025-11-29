@@ -385,7 +385,12 @@ Datinum는 다음과 같은 기능의 제공을 목표로 하고 있다.
 
 ### 4.1 1인 1인격 / 1인 1계정
 
-#### 4.1.1 사람 수만큼 “기본 단위”가 있는 구조
+<figure style="margin: 2rem 0; text-align: center;">
+  <img src="/images/one-person-one-account.jpg" alt="1인 1인격 / 1인 1계정 구조" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+  <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280;">DID 기반 시빌 공격 방지: 1인 1계정으로 보안 강화와 신뢰성 확보</figcaption>
+</figure>
+
+#### 4.1.1 사람 수만큼 "기본 단위"가 있는 구조
 
 이 프로젝트에서 가장 중요한 전제는 다음과 같다.
 
