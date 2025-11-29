@@ -10,7 +10,10 @@
 
 궁극적으로 이 프로젝트의 목표는 단순히 또 하나의 암호화폐를 만드는 것이 아니다. 우리는 **모든 사람이 태어날 때부터 최소한의 존엄을 보장받는 경제 시스템**을, 국가나 기업이 아닌 사람 한 명 한 명을 기준으로 작동하는 글로벌 인프라의 형태로 구현하고자 한다. 이 백서는 인격본위제 기본소득 기반 화폐가 데이터 시대의 **새로운 금본위제(데이터본위제)**로서 어떤 의미를 가지며, 어떻게 기존 자본주의·플랫폼 자본주의의 구조적 문제를 완화하고, 결국은 대중이 더 나은 세상에서 살아갈 수 있는 토대를 만들 수 있는지를 설명하기 위한 첫 번째 버전(Whitepaper v0.1 Draft)이다.
 
-
+<figure style="margin: 2rem 0; text-align: center;">
+  <img src="/images/currency-evolution.jpeg" alt="화폐의 진화: 금본위제에서 인격본위제로" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+  <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280;">화폐의 진화: 금본위제에서 인격본위제로</figcaption>
+</figure>
 
 ## 2. 배경과 문제의식 (Background & Problem Statement)
 
