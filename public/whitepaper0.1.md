@@ -208,6 +208,11 @@ UBI(Universal Basic Income, 보편적 기본소득)는 오랫동안 사회정책
 
 ### 3.1 인격본위제(Personhood Standard)의 정의
 
+<figure style="margin: 2rem 0; text-align: center;">
+  <img src="/images/personhood-standard.jpg" alt="Personhood Standard 개념도" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+  <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280;">인격본위제: 개인들의 네트워크가 전체 통화 공급과 경제를 형성</figcaption>
+</figure>
+
 #### 3.1.1 금본위제에서 인격본위제로
 
 역사적으로 “금본위제(Gold Standard)”는 화폐의 가치를 **금이라는 실물 자산**에 연동함으로써, 통화의 신뢰성과 안정성을 확보하고자 했던 시도였다. 이후 금본위제가 붕괴되고, 오늘날의 법정화폐(Fiat Money) 체제로 이행하면서 화폐의 가치는 주로 **국가·정부의 신용과 중앙은행의 정책**에 의해 뒷받침되고 있다.
@@ -223,11 +228,6 @@ UBI(Universal Basic Income, 보편적 기본소득)는 오랫동안 사회정책
 * 생물학적 인간(Physical Human)이며 동시에,
 * 디지털 네트워크 상에서 그를 대표하는 **분산 신원(DID, Decentralized Identifier)**과
 * 그가 생성·축적한 **데이터·이력·평판**을 포함하는 개념이다.
-
-<figure style="margin: 2rem 0; text-align: center;">
-  <img src="/images/personhood-standard.jpg" alt="Personhood Standard 개념도" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
-  <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280;">인격본위제: 개인들의 네트워크가 전체 통화 공급과 경제를 형성</figcaption>
-</figure>
 
 #### 3.1.2 국가와 국경을 넘어선 최소 단위
 
@@ -732,11 +732,6 @@ UBI는 **“존재의 가치”**에 대한 보상이라면,
 ---
 
 ### 5.4 토큰 유틸리티 (Utility & Use Cases)
-
-<figure style="margin: 2rem 0; text-align: center;">
-  <img src="/images/token-utility.jpg" alt="토큰 유틸리티" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
-  <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280;">토큰의 4가지 핵심 유틸리티: 데이터 뱅크, 프리미엄, 거버넌스, 생태계 결제</figcaption>
-</figure>
 
 토큰이 실제로 어디에 쓰이는지 명확해야,
 
