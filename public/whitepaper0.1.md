@@ -1447,6 +1447,11 @@ Outline의 방향을 정리하면 다음과 같다.
 
 전체를 관통하는 철학적 선택이다.
 
+<figure style="margin: 2rem 0; text-align: center;">
+  <img src="/images/coop-revenue-flow.jpg" alt="협동조합 수익 분배 흐름" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+  <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280;">협동조합 수익의 분배: 운영비, 개발비, 조합원 배당, 보상 풀 재충전</figcaption>
+</figure>
+
 이 장에서는 협동조합을 중심으로 한 **오프체인 거버넌스**와,
 토큰·스마트컨트랙트 기반의 **온체인 거버넌스**가 어떻게 맞물리는지 설명한다.
 
