@@ -82,7 +82,12 @@
 
 ### 2.2 데이터 자산의 착취 구조
 
-#### 2.2.1 데이터는 새로운 ‘디지털 금’이지만, 개인은 소유권이 없다
+#### 2.2.1 데이터는 새로운 '디지털 금'이지만, 개인은 소유권이 없다
+
+<figure style="margin: 2rem 0; text-align: center;">
+  <img src="/images/data-is-new-gold.jpg" alt="데이터 = 새로운 금" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+  <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280;">과거에는 금을 캤다면, 현재는 데이터를 캔다</figcaption>
+</figure>
 
 오늘날 대부분의 사람들은 스마트폰과 인터넷을 통해 일상적으로 방대한 양의 데이터를 남긴다.
 검색 기록, 위치 정보, 구매 이력, SNS 활동, 콘텐츠 소비 패턴, 취향과 관계망까지—이 모든 것은 플랫폼과 기업 입장에서 보면 **고가의 정제된 데이터**이자, 인공지능·추천 알고리즘·광고 비즈니스·신용 평가 등의 기반이 되는 새로운 자산이다.
