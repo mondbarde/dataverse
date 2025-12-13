@@ -41,7 +41,7 @@ function App() {
                 <FileText className="h-8 w-8 text-orange-600" />
                 <div className="ml-2 flex flex-col leading-tight">
                   <span className="text-xl font-bold text-gray-900 dark:text-white">IDium Whitepaper</span>
-                  <span className="text-xs font-medium text-gray-500 dark:text-gray-400">v0.1</span>
+                  <span className="text-xs font-medium text-gray-500 dark:text-gray-400">v1.0</span>
                 </div>
               </div>
             </div>
